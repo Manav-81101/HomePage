@@ -16,6 +16,32 @@ import {
   Icon,
 } from "../components/styledComponents";
 
+const icons = [
+  {
+    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    text: "Advertisements",
+  },
+  {
+    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    text: "Advertisements",
+  },
+  {
+    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    text: "Advertisements",
+  },
+  {
+    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    text: "Advertisements",
+  },
+  {
+    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    text: "Advertisements",
+  },
+  {
+    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    text: "Advertisements",
+  },
+];
 // markup
 const IndexPage = () => {
   return (
@@ -60,30 +86,12 @@ const IndexPage = () => {
       <RowContainer
         style={{ width: "70%", margin: "auto", marginVertical: 10 }}
       >
-        <Square>
-          <Icon src="https://i.ibb.co/rvkLPGk/bookmark-icon-3.png" />
-          <IconText>Advertisements</IconText>
-        </Square>
-        <Square>
-          <Icon src="https://i.ibb.co/rvkLPGk/bookmark-icon-3.png" />
-          <IconText>Advertisements</IconText>
-        </Square>
-        <Square>
-          <Icon src="https://i.ibb.co/rvkLPGk/bookmark-icon-3.png" />
-          <IconText>Advertisements</IconText>
-        </Square>
-        <Square>
-          <Icon src="https://i.ibb.co/rvkLPGk/bookmark-icon-3.png" />
-          <IconText>Advertisements</IconText>
-        </Square>
-        <Square>
-          <Icon src="https://i.ibb.co/rvkLPGk/bookmark-icon-3.png" />
-          <IconText>Advertisements</IconText>
-        </Square>
-        <Square>
-          <Icon src="https://i.ibb.co/rvkLPGk/bookmark-icon-3.png" />
-          <IconText>Advertisements</IconText>
-        </Square>
+        {icons.map((item, index) => (
+          <Square key={index}>
+            <Icon src={item.src} />
+            <IconText>{item.text}</IconText>
+          </Square>
+        ))}
       </RowContainer>
     </main>
   );
