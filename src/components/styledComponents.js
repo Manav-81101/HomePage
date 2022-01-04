@@ -96,6 +96,56 @@ const Icon = styled.img`
   margin: 0 auto;
 `;
 
+const GradientContainer = styled.div`
+  width: 100%;
+  height: 204px;
+  background: linear-gradient(
+    141.53deg,
+    #1dd6ce1f 2.66%,
+    #0087d71f 50.52%,
+    #be4ebe1f 111.52%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 100px 0;
+`;
+
+const CircleText = styled.div`
+  position: absolute;
+  width: 116.7px;
+  height: 116.52px;
+  border-radius: 50%;
+  left: calc(50% - 116.7px / 2 - 48.65px);
+  top: 150px;
+
+  /* Secondary 2 */
+  background: #0ec2cbaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:after {
+    content: "You";
+    font-size: 25px;
+    font-family: Poppins;
+    color: white;
+  }
+`;
+const CircleIcon = styled.div`
+  position: absolute;
+  width: 116.7px;
+  height: 116.52px;
+  border-radius: 50%;
+  left: calc(50% - 116.7px / 2 - 48.65px);
+  top: 150px;
+
+  /* Secondary 2 */
+  background: #0ec2cbaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export {
   RowContainer,
   ColumnContainer,
@@ -108,4 +158,7 @@ export {
   Title,
   CenterText,
   Icon,
+  GradientContainer,
+  CircleText,
+  CircleIcon,
 };

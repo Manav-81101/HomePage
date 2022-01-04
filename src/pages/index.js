@@ -1,98 +1,97 @@
 import React from "react";
-import styled from "styled-components";
 import Navbar from "../components/Navbar";
+import Section1 from "../components/Section1";
+import Section2 from "../components/Section2";
+import Section3 from "../components/Section3";
 
 import {
-  RowContainer,
-  ColumnContainer,
-  DesignButton,
-  DesignButtonFilled,
-  textStyles,
-  Square,
-  IconText,
-  NavLink,
-  Title,
-  CenterText,
+  CircleText,
+  CircleIcon,
+  GradientContainer,
   Icon,
 } from "../components/styledComponents";
+const item = {
+  src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+  text: "Advertisements",
+};
 
-const icons = [
-  {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
-  },
-  {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
-  },
-  {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
-  },
-  {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
-  },
-  {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
-  },
-  {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
-  },
-];
 // markup
 const IndexPage = () => {
   return (
     <main>
       <Navbar />
-      <Title>Generate instant graphic designs</Title>
-      <CenterText style={{ fontSize: 20, marginTop: 12 }}>
-        Instantly convert your text content into visual designs for your
-        campaigns, product banners,
-        <br /> website content, ads, email newsletters, and more in 1/100th of
-        the time and cost.
-      </CenterText>
-      <RowContainer
-        style={{
-          height: "4rem",
-          width: "100%",
-        }}
-      >
-        <DesignButtonFilled
+
+      <Section1 />
+
+      <GradientContainer>
+        <h3
           style={{
-            ...textStyles,
-            fontSize: 18,
+            fontFamily: "Poppins",
+            color: "#000",
             fontWeight: "400",
+            textAlign: "center",
           }}
         >
-          Get Instant Designs
-        </DesignButtonFilled>
-      </RowContainer>
-      <ColumnContainer
-        style={{ padding: 5, width: "60%", margin: "50px auto" }}
-      >
-        <img
-          style={{ width: "100%" }}
-          src="https://i.ibb.co/h7P4rhv/text-to-designs.png"
-          alt="text-to-designs"
-        />
-        <RowContainer>
-          <h3 style={textStyles}>Add your Content</h3>
-          <h3 style={textStyles}>Get Instant Designs</h3>
-        </RowContainer>
-      </ColumnContainer>
-      <RowContainer
-        style={{ width: "70%", margin: "auto", marginVertical: 10 }}
-      >
-        {icons.map((item, index) => (
-          <Square key={index}>
-            <Icon src={item.src} />
-            <IconText>{item.text}</IconText>
-          </Square>
-        ))}
-      </RowContainer>
+          Are you a business owner, marketer, content writer or a designer? Join
+          the new revolution in
+          <br /> design where humans and AI interact to produce stunning
+          creatives.
+        </h3>
+      </GradientContainer>
+      <Section2 />
+
+      <GradientContainer style={{ position: "relative" }}>
+        <h3
+          style={{
+            fontFamily: "Poppins",
+            color: "#000",
+            fontWeight: "400",
+            textAlign: "center",
+          }}
+        >
+          In a world full of distraction, grabbing attention is key.
+          <br /> A great way to do so is by creating visuals that stand out.
+        </h3>
+        <CircleText />
+        <CircleIcon
+          style={{
+            backgroundColor: "#1882D0AA",
+            left: "calc(50% - 116.7px/2 + 49.65px)",
+            flexDirection: "column",
+            "&:after": "",
+          }}
+        >
+          <Icon src={item.src} />
+        </CircleIcon>
+      </GradientContainer>
+      <Section3 />
+      <GradientContainer>
+        <h3
+          style={{
+            fontFamily: "Poppins",
+            color: "#000",
+            fontWeight: "400",
+            textAlign: "center",
+          }}
+        >
+          No design skills? No problem.
+          <br /> You can now create beautiful designs without having to be a
+          designer.
+        </h3>
+      </GradientContainer>
+      <GradientContainer>
+        <h3
+          style={{
+            fontFamily: "Poppins",
+            color: "#000",
+            fontWeight: "400",
+            textAlign: "center",
+          }}
+        >
+          No more sifting through design templates.
+          <br /> Sivi generates unique and stunning graphics for your content.
+        </h3>
+      </GradientContainer>
     </main>
   );
 };
