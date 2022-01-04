@@ -9,7 +9,7 @@ import {
   IconText,
   CenterText,
   Icon,
-} from "../components/styledComponents";
+} from "../styledComponents";
 
 const icons = [
   {

@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar";
 import Section1 from "../components/Section1";
 import Section2 from "../components/Section2";
 import Section3 from "../components/Section3";
+import Section4 from "../components/Section4";
+import Section5 from "../components/Section5";
 
 import {
   CircleText,
@@ -20,9 +22,7 @@ const IndexPage = () => {
   return (
     <main>
       <Navbar />
-
       <Section1 />
-
       <GradientContainer>
         <h3
           style={{
@@ -39,7 +39,6 @@ const IndexPage = () => {
         </h3>
       </GradientContainer>
       <Section2 />
-
       <GradientContainer style={{ position: "relative" }}>
         <h3
           style={{
@@ -79,6 +78,7 @@ const IndexPage = () => {
           designer.
         </h3>
       </GradientContainer>
+      <Section4 />
       <GradientContainer>
         <h3
           style={{
@@ -92,6 +92,7 @@ const IndexPage = () => {
           <br /> Sivi generates unique and stunning graphics for your content.
         </h3>
       </GradientContainer>
+      <Section5 />
     </main>
   );
 };

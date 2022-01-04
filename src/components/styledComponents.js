@@ -21,7 +21,7 @@ const ColumnContainer = styled.div`
 const DesignButton = styled.button`
   background-color: transparent;
   border-color: skyblue;
-  color: #1882d0 !important;
+  color: #1882d0;
   padding: 0.5rem 1rem;
   font-weight: 400;
   border-radius: 25px;

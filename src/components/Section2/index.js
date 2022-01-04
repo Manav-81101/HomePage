@@ -1,5 +1,5 @@
 import React from "react";
-import { RowContainer, ColumnContainer, IconText } from "./styledComponents";
+import { RowContainer, ColumnContainer, IconText } from "../styledComponents";
 
 const textBlack = {
     color: "#000000",
@@ -9,7 +9,7 @@ const textBlack = {
 function Section2() {
   return (
     <div>
-      <RowContainer>
+      <RowContainer style={{ maxWidth: "60%", margin: "auto" }}>
         <ColumnContainer>
           <img
             src="https://i.ibb.co/C24wzvT/sivi-mascot.png"

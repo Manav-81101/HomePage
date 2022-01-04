@@ -1,6 +1,6 @@
 import React from "react";
-import { RowContainer, IconText, Title } from "./styledComponents";
-import DesignPerson from "./DesignPerson";
+import { RowContainer, IconText, Title } from "../styledComponents";
+import DesignPerson from "../DesignPerson";
 
 const items = [
   {
