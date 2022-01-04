@@ -66,11 +66,15 @@ function Section5() {
             <img src="https://i.ibb.co/6FCS7rp/Group-11.png" />
           </RowContainer>
         </ColumnContainer>
-        <ColumnContainer style={{ height: 150, alignItems: "flex-start" }}>
-          <IconText style={{ color: "#fff" }}>How It Works</IconText>
-          <IconText style={{ color: "#fff" }}>Tour</IconText>
-          <IconText style={{ color: "#fff" }}>Team</IconText>
-          <IconText style={{ color: "#fff" }}>
+        <ColumnContainer
+          style={{ height: 150, width: 800, alignItems: "flex-start" }}
+        >
+          <IconText style={{ color: "#fff", fontSize: 14 }}>
+            How It Works
+          </IconText>
+          <IconText style={{ color: "#fff", fontSize: 14 }}>Tour</IconText>
+          <IconText style={{ color: "#fff", fontSize: 14 }}>Team</IconText>
+          <IconText style={{ color: "#fff", fontSize: 14 }}>
             Privacy Policy and Terms of Use
           </IconText>
         </ColumnContainer>

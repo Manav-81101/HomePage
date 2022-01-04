@@ -42,50 +42,48 @@ const oldItems = [
 
 function Section4() {
   return (
-    <div>
-      <RowContainer>
-        <ColumnContainer>
-          <Title style={headStyles}>
-            The Old Way{" "}
-            <IconText style={textStyles}>
-              Stuck with templates and design editing tools{" "}
-            </IconText>
-          </Title>
-          <ColumnContainer style={{ height: "650px" }}>
-            {oldItems.map((item, index) => (
-              <RowContainer
-                key={index}
-                style={{
-                  width: "60%",
-                  margin: "auto",
-                  justifyContent: "space-between",
-                }}
-              >
-                <img src={item.img} />
-                <IconText style={{ width: "50%" }}>{item.text}</IconText>
-              </RowContainer>
-            ))}
-          </ColumnContainer>
+    <RowContainer style={{ width: "90%", margin: "auto" }}>
+      <ColumnContainer>
+        <Title style={headStyles}>
+          The Old Way{" "}
+          <IconText style={textStyles}>
+            Stuck with templates and design editing tools{" "}
+          </IconText>
+        </Title>
+        <ColumnContainer style={{ height: "650px" }}>
+          {oldItems.map((item, index) => (
+            <RowContainer
+              key={index}
+              style={{
+                width: "60%",
+                margin: "auto",
+                justifyContent: "space-between",
+              }}
+            >
+              <img src={item.img} />
+              <IconText style={{ width: "50%" }}>{item.text}</IconText>
+            </RowContainer>
+          ))}
         </ColumnContainer>
+      </ColumnContainer>
+      <ColumnContainer>
+        <Title style={headStyles}>
+          The All New Sivi Way
+          <IconText style={textStyles}>
+            Generate designs rather than editing templates{" "}
+          </IconText>
+        </Title>
+        <img src="https://i.ibb.co/3mHkJJz/image-8.png" />
         <ColumnContainer>
-          <Title style={headStyles}>
-            The All New Sivi Way
-            <IconText style={textStyles}>
-              Generate designs rather than editing templates{" "}
+          {items.map((item, index) => (
+            <IconText key={index} style={{ color: "#000" }}>
+              <img style={iconStyle} src={tickImg} />
+              {item}
             </IconText>
-          </Title>
-          <img src="https://i.ibb.co/3mHkJJz/image-8.png" />
-          <ColumnContainer>
-            {items.map((item, index) => (
-              <IconText key={index} style={{ color: "#000" }}>
-                <img style={iconStyle} src={tickImg} />
-                {item}
-              </IconText>
-            ))}
-          </ColumnContainer>
+          ))}
         </ColumnContainer>
-      </RowContainer>
-    </div>
+      </ColumnContainer>
+    </RowContainer>
   );
 }
 
