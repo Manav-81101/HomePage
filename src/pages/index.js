@@ -9,7 +9,7 @@ import Section5 from "../components/Section5";
 
 import { CircleText, CircleIcon, Icon } from "../components/styledComponents";
 const item = {
-  src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+  src: "https://i.ibb.co/bmCZTwF/mascot-original.png",
   text: "Advertisements",
 };
 
@@ -40,7 +40,7 @@ const IndexPage = () => {
                 "&:after": "",
               }}
             >
-              <Icon src={item.src} />
+              <Icon style={{ width: "50px", height: "70px" }} src={item.src} />
             </CircleIcon>
           </>
         }

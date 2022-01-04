@@ -13,28 +13,28 @@ import {
 
 const icons = [
   {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
+    src: "https://i.ibb.co/dcZNDZg/icon.png",
     text: "Advertisements",
   },
   {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
+    src: "https://i.ibb.co/MC41BbN/megaphone.png",
+    text: "Marketing",
   },
   {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
+    src: "https://i.ibb.co/XpVc6Z9/web-24px.png",
+    text: "Website Content",
   },
   {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
+    src: "https://i.ibb.co/DfYr3jP/volume-up-24px.png",
+    text: "Social Posts",
   },
   {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
+    src: "https://i.ibb.co/sgC4Ft7/web-24px.png",
+    text: "Product Banners",
   },
   {
-    src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
-    text: "Advertisements",
+    src: "https://i.ibb.co/TwRjwfY/Group-63.png",
+    text: "NewsLetters",
   },
 ];
 function Section1() {
@@ -87,7 +87,7 @@ function Section1() {
       >
         {icons.map((item, index) => (
           <Square key={index}>
-            <Icon src={item.src} />
+            <Icon src={item.src} style={{ width: "60px", height: "60px" }} />
             <IconText>{item.text}</IconText>
           </Square>
         ))}
