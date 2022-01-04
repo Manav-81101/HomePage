@@ -7,12 +7,7 @@ import Section3 from "../components/Section3";
 import Section4 from "../components/Section4";
 import Section5 from "../components/Section5";
 
-import {
-  CircleText,
-  CircleIcon,
-  GradientContainer,
-  Icon,
-} from "../components/styledComponents";
+import { CircleText, CircleIcon, Icon } from "../components/styledComponents";
 const item = {
   src: "https://i.ibb.co/rvkLPGk/bookmark-icon-3.png",
   text: "Advertisements",
