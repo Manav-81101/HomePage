@@ -37,8 +37,7 @@ function Section3() {
         Designs for Everyone
         <IconText style={{ color: "#000" }}>In just a minute</IconText>
       </Title>
-      <DesignPerson />
-      <RowContainer style={{ width: "80%", margin: "auto" }}>
+      <RowContainer style={{ width: "80%", margin: "5rem auto" }}>
         {items.map((item, index) => (
           <DesignPerson key={index} {...item} />
         ))}

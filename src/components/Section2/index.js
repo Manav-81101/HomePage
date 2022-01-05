@@ -3,6 +3,8 @@ import { RowContainer, ColumnContainer, IconText } from "../styledComponents";
 
 const textBlack = {
     color: "#000000",
+    textAlign: "left",
+    alignSelf: "flex-start",
   },
   iconStyle = { marginRight: 10 };
 

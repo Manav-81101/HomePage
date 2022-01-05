@@ -66,6 +66,14 @@ function Section4() {
           ))}
         </ColumnContainer>
       </ColumnContainer>
+      <ColumnContainer
+        style={{
+          width: 1,
+          height: "680px",
+          borderRightWidth: 2,
+          borderRightStyle: "dashed",
+        }}
+      />
       <ColumnContainer>
         <Title style={headStyles}>
           The All New Sivi Way
@@ -76,7 +84,15 @@ function Section4() {
         <img src="https://i.ibb.co/3mHkJJz/image-8.png" />
         <ColumnContainer>
           {items.map((item, index) => (
-            <IconText key={index} style={{ color: "#000" }}>
+            <IconText
+              key={index}
+              style={{
+                color: "#000",
+                alignSelf: "center",
+                width: 200,
+                textAlign: "left",
+              }}
+            >
               <img style={iconStyle} src={tickImg} />
               {item}
             </IconText>
