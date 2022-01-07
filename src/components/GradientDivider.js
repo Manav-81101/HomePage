@@ -4,20 +4,22 @@ import {
   CircleText,
   CircleIcon,
   Icon,
+  gradientHeadingStyles,
 } from "./styledComponents";
-const headingStyles = {
-  fontFamily: "Poppins",
-  color: "#000",
-  fontWeight: "400",
-  textAlign: "center",
-  width: "45%",
-  margin: "auto",
-};
+
+function getText(text) {
+  switch (typeof text) {
+    case "string":
+      return <h3 style={gradientHeadingStyles}>{text}</h3>;
+    case "object":
+      return text;
+  }
+}
 
 function GradientDivider({ text, icon }) {
   return (
     <GradientContainer style={{ position: "relative" }}>
-      <h3 style={headingStyles}>{text}</h3>
+      {getText(text)}
       {icon}
     </GradientContainer>
   );

@@ -4,12 +4,14 @@ import {
   DesignButton,
   textStyles,
   NavLink,
+  RowColContainer,
+  ColumnContainer,
 } from "../components/styledComponents";
 
 function Navbar() {
   return (
-    <div>
-      <RowContainer
+    <ColumnContainer>
+      <RowColContainer
         style={{
           paddingVertical: 20,
           position: "sticky",
@@ -21,7 +23,7 @@ function Navbar() {
           src="https://hellosivi.com/wp-content/uploads/2021/12/hellosivi-logo-1.png"
           alt="logo"
         />
-        <RowContainer style={{ width: "40%" }}>
+        <RowColContainer style={{ width: "40%" }}>
           <NavLink style={textStyles} href="#home">
             Home
           </NavLink>
@@ -38,9 +40,9 @@ function Navbar() {
             Team
           </NavLink>
           <DesignButton style={textStyles}>Get Instant Design</DesignButton>
-        </RowContainer>
-      </RowContainer>
-    </div>
+        </RowColContainer>
+      </RowColContainer>
+    </ColumnContainer>
   );
 }
 

@@ -1,34 +1,57 @@
 import React from "react";
+import { graphql } from "gatsby";
 import GradientDivider from "../components/GradientDivider";
 import Navbar from "../components/Navbar";
-import Section1 from "../components/Section1";
-import Section2 from "../components/Section2";
-import Section3 from "../components/Section3";
-import Section4 from "../components/Section4";
-import Section5 from "../components/Section5";
-
-import { CircleText, CircleIcon, Icon } from "../components/styledComponents";
+import Header from "../components/Header";
+import DesignCompanion from "../components/DesignCompanion";
+import DesignPersons from "../components/DesignPersons";
+import OldWayNewWay from "../components/OldWayNewWay";
+import Footer from "../components/Footer";
+import {
+  CircleText,
+  CircleIcon,
+  Icon,
+  gradientHeadingStyles,
+} from "../components/styledComponents";
 const item = {
   src: "https://i.ibb.co/bmCZTwF/mascot-original.png",
   text: "Advertisements",
 };
-
 // markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log(data);
+  const { gradient1, gradient2, gradient3, gradient4 } =
+    data.site.siteMetadata.gradientContainers;
   return (
     <main>
       <Navbar />
-      <Section1 />
+      <Header />
       <GradientDivider
-        text="Are you a business owner, marketer, content writer or a designer? Join
-          the new revolution in
-          design where humans and AI interact to produce stunning
-          creatives"
+        text={
+          gradient1.text2 ? (
+            <h3 style={gradientHeadingStyles}>
+              {gradient1.text1}
+              <br />
+              {gradient1.text2}
+            </h3>
+          ) : (
+            gradient1.text1
+          )
+        }
       />
-      <Section2 />
+      <DesignCompanion />
       <GradientDivider
-        text="In a world full of distraction, grabbing attention is key.
-           A great way to do so is by creating visuals that stand out."
+        text={
+          gradient2.text2 ? (
+            <h3 style={gradientHeadingStyles}>
+              {gradient2.text1}
+              <br />
+              {gradient2.text2}
+            </h3>
+          ) : (
+            gradient2.text1
+          )
+        }
         icon={
           <>
             <CircleText />
@@ -45,22 +68,65 @@ const IndexPage = () => {
           </>
         }
       />
-      <Section3 />
+      <DesignPersons />
       <GradientDivider
-        text="No design skills? No problem.
- You can now create beautiful designs without having to be a
-          designer."
+        text={
+          gradient3.text2 ? (
+            <h3 style={gradientHeadingStyles}>
+              {gradient3.text1}
+              <br />
+              {gradient3.text2}
+            </h3>
+          ) : (
+            gradient3.text1
+          )
+        }
       />
 
-      <Section4 />
+      <OldWayNewWay />
       <GradientDivider
-        text="
-          No more sifting through design templates.
-          Sivi generates unique and stunning graphics for your content."
+        text={
+          gradient4.text2 ? (
+            <h3 style={gradientHeadingStyles}>
+              {gradient4.text1}
+              <br />
+              {gradient4.text2}
+            </h3>
+          ) : (
+            gradient4.text1
+          )
+        }
       />
-      <Section5 />
+      <Footer />
     </main>
   );
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  {
+    site {
+      siteMetadata {
+        gradientContainers {
+          gradient1 {
+            text1
+            text2
+          }
+          gradient2 {
+            text1
+            text2
+          }
+          gradient3 {
+            text1
+            text2
+          }
+          gradient4 {
+            text1
+            text2
+          }
+        }
+      }
+    }
+  }
+`;

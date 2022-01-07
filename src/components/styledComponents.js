@@ -21,6 +21,7 @@ const ColumnContainer = styled.div`
 const DesignButton = styled.button`
   background-color: transparent;
   border-color: skyblue;
+  border-style: solid;
   color: #1882d0;
   padding: 0.5rem 1rem;
   font-weight: 400;
@@ -59,6 +60,7 @@ const Square = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: 20px auto;
 `;
 const IconText = styled.p`
   color: #0ec2cb;
@@ -84,6 +86,11 @@ const Title = styled.h1`
   font-family: Poppins;
   color: #000;
   font-size: 3.5rem;
+  @media (max-width: 768px) {
+    & {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 const CenterText = styled.p`
@@ -101,14 +108,19 @@ const GradientContainer = styled.div`
   height: 204px;
   background: linear-gradient(
     141.53deg,
-    #1dd6ce1f 2.66%,
-    #0087d71f 50.52%,
-    #be4ebe1f 111.52%
+    #1dd6ce13 2.66%,
+    #0087d713 50.52%,
+    #be4ebe13 111.52%
   );
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 100px 0;
+  @media (max-width: 768px) {
+    & {
+      padding: 20px 0;
+    }
+  }
 `;
 
 const CircleText = styled.div`
@@ -130,6 +142,11 @@ const CircleText = styled.div`
     font-family: Poppins;
     color: white;
   }
+  @media (max-width: 768px) {
+    & {
+      top: 200px;
+    }
+  }
 `;
 const CircleIcon = styled.div`
   position: absolute;
@@ -144,6 +161,58 @@ const CircleIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    & {
+      top: 200px;
+    }
+  }
+`;
+const gradientHeadingStyles = {
+  fontFamily: "Poppins",
+  color: "#000",
+  fontWeight: "400",
+  textAlign: "center",
+};
+const RowColContainer = styled(RowContainer)`
+  @media (max-width: 768px) {
+    & {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+`;
+
+const DesignPersonContainer = styled.div`
+  width: 240px;
+  text-align: center;
+  position: relative;
+  padding: 10;
+  border-radius: 5;
+  background: linear-gradient(
+    141.53deg,
+    #1dd6ce22 2.66%,
+    #0087d722 50.52%,
+    #be4ebe22 111.52%
+  );
+  @media (max-width: 768px) {
+    & {
+      margin-top: 50px;
+    }
+  }
+`;
+
+const DashedDivider = styled(ColumnContainer)`
+  width: 1px;
+  height: 680px;
+  border-right-width: 2;
+  border-right-style: dashed;
+  border-color: #cad7e0;
+  display: block;
+  @media (max-width: 768px) {
+    & {
+      display: none;
+    }
+  }
 `;
 
 export {
@@ -161,4 +230,8 @@ export {
   GradientContainer,
   CircleText,
   CircleIcon,
+  gradientHeadingStyles,
+  RowColContainer,
+  DesignPersonContainer,
+  DashedDivider,
 };
