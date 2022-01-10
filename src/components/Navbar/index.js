@@ -12,6 +12,8 @@ import {
   NavItemsContainer,
 } from "./styledComponents";
 
+const items = ["Home", "How It Works", "Tour", "Blog", "Team"];
+
 function Navbar() {
   const [expanded, setExpanded] = React.useState(false);
   return (
@@ -39,21 +41,15 @@ function Navbar() {
           </ToggleButton>
         </NavContainer>
         <NavItemsContainer visible={expanded}>
-          <NavLink style={textStyles} href="#home">
-            Home
-          </NavLink>
-          <NavLink style={textStyles} href="#how-it-words">
-            How It Works
-          </NavLink>
-          <NavLink style={textStyles} href="#tour">
-            Tour
-          </NavLink>
-          <NavLink style={textStyles} href="#blog">
-            Blog
-          </NavLink>
-          <NavLink style={textStyles} eventKey={2} href="#memes">
-            Team
-          </NavLink>
+          {items.map((item, index) => (
+            <NavLink
+              key={index}
+              style={{ ...textStyles, marginRight: 30 }}
+              href={`#${item}`}
+            >
+              {item}
+            </NavLink>
+          ))}
           <DesignButton style={textStyles}>Get Instant Design</DesignButton>
         </NavItemsContainer>
       </RowColContainer>

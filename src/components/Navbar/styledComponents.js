@@ -22,7 +22,7 @@ const NavContainer = styled(RowContainer)`
 `;
 
 const NavItemsContainer = styled(RowColContainer)`
-  width: 40%;
+  width: auto;
   background-color: #fff;
   display: flex;
   height: auto;
