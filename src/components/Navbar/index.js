@@ -18,11 +18,10 @@ function Navbar() {
     <ColumnContainer>
       <RowColContainer
         style={{
-          paddingVertical: 20,
           position: "sticky",
           top: 0,
-          backgroundColor: "#fff",
-          width: window.innerWidth > 768 ? "90%" : "90%",
+          width: "95%",
+          justifyContent: "space-between",
         }}
       >
         <NavContainer>
