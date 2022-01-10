@@ -64,7 +64,11 @@ function Section1() {
         </RowContainer>
       </ColumnContainer>
       <RowColContainer
-        style={{ width: "70%", margin: "auto", marginVertical: 10 }}
+        style={{
+          width: "100%",
+          margin: "auto",
+          marginVertical: 10,
+        }}
       >
         {icons.map((item, index) => (
           <Square key={index}>

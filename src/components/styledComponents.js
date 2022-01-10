@@ -26,6 +26,11 @@ const DesignButton = styled.button`
   padding: 0.5rem 1rem;
   font-weight: 400;
   border-radius: 25px;
+  @media (max-width: 768px) {
+    & {
+      width: 180px;
+    }
+  }
 `;
 const DesignButtonFilled = styled.button`
   background-image: linear-gradient(
@@ -52,15 +57,21 @@ const Square = styled.div`
   height: 10rem;
   background: linear-gradient(
     141.53deg,
-    #1dd6ce11 2.66%,
-    #0087d711 50.52%,
-    #be4ebe11 111.52%
+    #1dd6ce1f 2.66%,
+    #0087d71f 50.52%,
+    #be4ebe1f 111.52%
   );
-  border-radius: 9px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 20px auto;
+  @media (max-width: 768px) {
+    & {
+      width: 19rem;
+      justify-content: center;
+    }
+  }
 `;
 const IconText = styled.p`
   color: #0ec2cb;
@@ -68,9 +79,6 @@ const IconText = styled.p`
   font-size: 1rem;
   opacity: 1;
   font-family: Poppins;
-`;
-const NavLink = styled.a`
-  text-decoration: none;
 `;
 
 // styles
@@ -105,7 +113,7 @@ const Icon = styled.img`
 
 const GradientContainer = styled.div`
   width: 100%;
-  height: 204px;
+  height: auto;
   background: linear-gradient(
     141.53deg,
     #1dd6ce13 2.66%,
@@ -116,9 +124,11 @@ const GradientContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   margin: 100px 0;
+  padding: 50px 0;
   @media (max-width: 768px) {
     & {
       padding: 20px 0;
+      justify-content: center;
     }
   }
 `;
@@ -173,6 +183,15 @@ const gradientHeadingStyles = {
   fontWeight: "400",
   textAlign: "center",
 };
+
+const GradientHeading = styled.h3`
+  @media (max-width: 768px) {
+    & {
+      font-size: 25px;
+    }
+  }
+`;
+
 const RowColContainer = styled(RowContainer)`
   @media (max-width: 768px) {
     & {
@@ -186,7 +205,7 @@ const DesignPersonContainer = styled.div`
   width: 240px;
   text-align: center;
   position: relative;
-  padding: 10;
+  padding: 15px;
   border-radius: 5;
   background: linear-gradient(
     141.53deg,
@@ -196,7 +215,8 @@ const DesignPersonContainer = styled.div`
   );
   @media (max-width: 768px) {
     & {
-      margin-top: 50px;
+      margin-top: 30px;
+      width: 100%;
     }
   }
 `;
@@ -223,7 +243,6 @@ export {
   textStyles,
   Square,
   IconText,
-  NavLink,
   Title,
   CenterText,
   Icon,
@@ -234,4 +253,5 @@ export {
   RowColContainer,
   DesignPersonContainer,
   DashedDivider,
+  GradientHeading,
 };

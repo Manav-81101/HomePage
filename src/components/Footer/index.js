@@ -33,9 +33,19 @@ function Section5() {
       <Title style={{ margin: 0, fontSize: 45, fontWeight: "500" }}>
         Recognitions
       </Title>
-      <RowColContainer style={{ width: "70%", marginTop: 30 }}>
+      <RowColContainer
+        style={{
+          width: "70%",
+          marginTop: 30,
+          marginBottom: 10,
+          height: "auto",
+        }}
+      >
         {items.map((item, index) => (
-          <ColumnContainer key={index}>
+          <ColumnContainer
+            key={index}
+            style={{ height: "200px", margin: "10px auto" }}
+          >
             <img src={item.img} />
             <IconText style={{ color: "#000" }}>{item.text}</IconText>
           </ColumnContainer>

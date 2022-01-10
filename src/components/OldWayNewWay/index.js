@@ -75,12 +75,15 @@ function Section4() {
         </ColumnContainer>
       </ColumnContainer>
       <DashedDivider />
-      <ColumnContainer style={{ height: "800px", marginTop: 50 }}>
+      <ColumnContainer style={{ height: "800px", marginTop: 80 }}>
         <Title style={headStyles}>
           {right.title}
           <IconText style={textStyles}>{right.subheader}</IconText>
         </Title>
-        <img src="https://i.ibb.co/3mHkJJz/image-8.png" />
+        <img
+          src="https://i.ibb.co/3mHkJJz/image-8.png"
+          style={{ width: window.innerWidth < 768 ? "100%" : "auto" }}
+        />
         <ColumnContainer style={{ height: "700px" }}>
           {right.items.map((item, index) => (
             <IconText

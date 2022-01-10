@@ -12,6 +12,7 @@ import {
   CircleIcon,
   Icon,
   gradientHeadingStyles,
+  GradientHeading,
 } from "../components/styledComponents";
 const item = {
   src: "https://i.ibb.co/bmCZTwF/mascot-original.png",
@@ -29,11 +30,11 @@ const IndexPage = ({ data }) => {
       <GradientDivider
         text={
           gradient1.text2 ? (
-            <h3 style={gradientHeadingStyles}>
+            <GradientHeading style={gradientHeadingStyles}>
               {gradient1.text1}
               <br />
               {gradient1.text2}
-            </h3>
+            </GradientHeading>
           ) : (
             gradient1.text1
           )
@@ -43,11 +44,11 @@ const IndexPage = ({ data }) => {
       <GradientDivider
         text={
           gradient2.text2 ? (
-            <h3 style={gradientHeadingStyles}>
+            <GradientHeading style={gradientHeadingStyles}>
               {gradient2.text1}
               <br />
               {gradient2.text2}
-            </h3>
+            </GradientHeading>
           ) : (
             gradient2.text1
           )
@@ -72,11 +73,11 @@ const IndexPage = ({ data }) => {
       <GradientDivider
         text={
           gradient3.text2 ? (
-            <h3 style={gradientHeadingStyles}>
+            <GradientHeading style={gradientHeadingStyles}>
               {gradient3.text1}
               <br />
               {gradient3.text2}
-            </h3>
+            </GradientHeading>
           ) : (
             gradient3.text1
           )
@@ -87,11 +88,11 @@ const IndexPage = ({ data }) => {
       <GradientDivider
         text={
           gradient4.text2 ? (
-            <h3 style={gradientHeadingStyles}>
+            <GradientHeading style={gradientHeadingStyles}>
               {gradient4.text1}
               <br />
               {gradient4.text2}
-            </h3>
+            </GradientHeading>
           ) : (
             gradient4.text1
           )
